@@ -1,0 +1,28 @@
+{
+  "name": "Plant",
+  "type": "object",
+  "properties": {
+    "sku": { "type": "string", "minLength": 1, "description": "Codigo unico del producto" },
+    "common_name": { "type": "string", "minLength": 1, "description": "Nombre comun de la planta" },
+    "scientific_name": { "type": "string", "description": "Nombre cientifico (genero y especie)" },
+    "plant_type": { "type": "string", "enum": ["succulent", "cactus", "hybrid"], "default": "succulent", "description": "Tipo de planta" },
+    "family": { "type": "string", "description": "Familia botanica (ej: Crassulaceae, Cactaceae)" },
+    "genus": { "type": "string", "description": "Genero botanico" },
+    "size": { "type": "string", "enum": ["mini", "small", "medium", "large", "extra_large"], "default": "small", "description": "Tamano de la planta" },
+    "pot_size_cm": { "type": "number", "minimum": 0, "description": "Tamano de la maceta en cm" },
+    "care_level": { "type": "string", "enum": ["easy", "moderate", "difficult"], "default": "easy", "description": "Nivel de cuidado requerido" },
+    "light_needs": { "type": "string", "enum": ["low", "medium", "high", "full_sun"], "default": "high", "description": "Necesidades de luz" },
+    "water_frequency": { "type": "string", "enum": ["weekly", "biweekly", "monthly", "rarely"], "default": "biweekly", "description": "Frecuencia de riego" },
+    "purchase_cost": { "type": "number", "minimum": 0, "description": "Costo de compra/adquisicion" },
+    "sale_price": { "type": "number", "minimum": 0, "description": "Precio de venta" },
+    "currency": { "type": "string", "enum": ["MXN", "USD"], "default": "MXN" },
+    "stock_quantity": { "type": "integer", "minimum": 0, "default": 0, "description": "Cantidad en inventario" },
+    "low_stock_alert": { "type": "integer", "minimum": 0, "default": 5, "description": "Alerta cuando el stock baje de este nivel" },
+    "supplier_id": { "type": "string", "description": "ID del proveedor" },
+    "image_url": { "type": "string", "format": "uri", "description": "URL de imagen" },
+    "notes": { "type": "string", "description": "Notas adicionales" },
+    "is_available": { "type": "boolean", "default": true, "description": "Disponible para venta" },
+    "tags": { "type": "array", "items": { "type": "string" }, "description": "Etiquetas para busqueda" }
+  },
+  "required": ["sku", "common_name", "plant_type", "sale_price"]
+}

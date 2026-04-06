@@ -1,0 +1,21 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "transaction_type": { "type": "string", "enum": ["purchase", "sale"], "description": "Tipo: compra o venta" },
+    "plant_id": { "type": "string", "description": "ID de la planta" },
+    "plant_name": { "type": "string", "description": "Nombre de la planta (snapshot)" },
+    "quantity": { "type": "integer", "minimum": 1, "default": 1, "description": "Cantidad" },
+    "unit_price": { "type": "number", "minimum": 0, "description": "Precio unitario" },
+    "total_amount": { "type": "number", "minimum": 0, "description": "Monto total" },
+    "currency": { "type": "string", "enum": ["MXN", "USD"], "default": "MXN" },
+    "customer_name": { "type": "string", "description": "Nombre del cliente (para ventas)" },
+    "customer_phone": { "type": "string", "description": "Telefono del cliente" },
+    "supplier_id": { "type": "string", "description": "ID del proveedor (para compras)" },
+    "transaction_date": { "type": "string", "format": "date", "description": "Fecha de la transaccion" },
+    "payment_method": { "type": "string", "enum": ["cash", "card", "transfer", "other"], "default": "cash", "description": "Metodo de pago" },
+    "status": { "type": "string", "enum": ["pending", "completed", "cancelled"], "default": "completed", "description": "Estado" },
+    "notes": { "type": "string", "description": "Notas" }
+  },
+  "required": ["transaction_type", "plant_name", "quantity", "unit_price", "total_amount"]
+}

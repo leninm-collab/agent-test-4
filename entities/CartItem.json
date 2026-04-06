@@ -1,0 +1,14 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "session_id": { "type": "string", "description": "ID de sesion del cliente" },
+    "plant_id": { "type": "string", "description": "ID de la planta" },
+    "plant_name": { "type": "string", "description": "Nombre de la planta" },
+    "plant_sku": { "type": "string", "description": "SKU de la planta" },
+    "unit_price": { "type": "number", "minimum": 0, "description": "Precio unitario" },
+    "quantity": { "type": "integer", "minimum": 1, "default": 1, "description": "Cantidad" },
+    "image_url": { "type": "string", "format": "uri", "description": "Imagen del producto" }
+  },
+  "required": ["session_id", "plant_id", "plant_name", "unit_price", "quantity"]
+}

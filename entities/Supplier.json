@@ -1,0 +1,18 @@
+{
+  "name": "Supplier",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "description": "Nombre del proveedor o vivero" },
+    "contact_name": { "type": "string", "description": "Nombre de contacto" },
+    "phone": { "type": "string", "description": "Telefono" },
+    "email": { "type": "string", "format": "email", "description": "Correo electronico" },
+    "address": { "type": "string", "description": "Direccion" },
+    "city": { "type": "string", "description": "Ciudad" },
+    "state": { "type": "string", "description": "Estado" },
+    "specialization": { "type": "string", "enum": ["succulents", "cacti", "both", "exotic", "wholesale"], "default": "both", "description": "Especializacion" },
+    "rating": { "type": "integer", "minimum": 1, "maximum": 5, "default": 3, "description": "Calificacion 1-5" },
+    "notes": { "type": "string", "description": "Notas sobre el proveedor" },
+    "is_active": { "type": "boolean", "default": true }
+  },
+  "required": ["name"]
+}

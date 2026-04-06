@@ -1,0 +1,13 @@
+{
+  "name": "Category",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "description": "Nombre de la categoria" },
+    "description": { "type": "string", "description": "Descripcion de la categoria" },
+    "parent_category": { "type": "string", "description": "Categoria padre (para subcategorias)" },
+    "image_url": { "type": "string", "format": "uri", "description": "Imagen representativa" },
+    "display_order": { "type": "integer", "default": 0, "description": "Orden de visualizacion" },
+    "is_active": { "type": "boolean", "default": true }
+  },
+  "required": ["name"]
+}

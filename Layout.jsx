@@ -13,7 +13,7 @@ const adminNav = [
   { name: "Inventario", page: "Inventory", icon: Package },
   { name: "Ordenes", page: "Orders", icon: ClipboardList },
   { name: "Transacciones", page: "Transactions", icon: ShoppingCart },
-  { name: "Proveedores", page: "Suppliers", icon: Users },
+  { name: "Proveedores", page: "Suppliers lenin", icon: Users },
 ];
 
 export default function Layout({ children, currentPageName }) {

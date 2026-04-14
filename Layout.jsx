@@ -28,7 +28,7 @@ export default function Layout({ children, currentPageName }) {
               <div className="bg-green-600 text-white p-2 rounded-lg">
                 <Leaf className="h-5 w-5" />
               </div>
-              <span className="text-xl font-bold text-green-800">Suculentas & Cactus</span>
+              <span className="text-xl font-bold text-green-800">Suculentas & Cactus from Lenin</span>
             </Link>
             <nav className="hidden md:flex gap-1">
               {clientNav.map((item) => {
